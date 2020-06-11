@@ -26,6 +26,11 @@ basic_raw_2 = raw_data_2[['hhldcode', 'firstname_person', 'lastname_person']].co
 # basic_raw_1.drop(indexNumericNames, inplace=True)
 # we don't want to drop any rows
 
+basic_raw_1['firstname_person'].astype(str)
+basic_raw_1['lastname_person'].astype(str)
+basic_raw_2['firstname_person'].astype(str)
+basic_raw_2['lastname_person'].astype(str)
+
 print("cleaning useless, annoying titles...")
 titles = ['mr', 'mrs', 'dr', 'engr', 'miss', r'\.']
 pattern = '|'.join(titles)
